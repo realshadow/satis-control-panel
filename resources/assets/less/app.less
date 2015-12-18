@@ -1,0 +1,181 @@
+@import (inline) '../../bower/bootstrap/dist/css/bootstrap.css';
+@import (inline) '../../bower/font-awesome/css/font-awesome.css';
+
+body {
+	background: #F5F5F6;
+}
+
+.container {
+	margin: 30px auto;
+
+	.modal-body {
+		padding-bottom: 0;
+	}
+
+	.modal-footer {
+		border: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.panel {
+		&-heading {
+			padding: 5px 5px 0 5px;
+
+			.nav-tab-title {
+				padding: 10px 30px 0 10px;
+			}
+
+			.nav.nav-tabs {
+				border-bottom: none;
+
+				li {
+					border-top: none;
+				}
+			}
+
+			.nav > li > a {
+				padding: 10px 15px;
+			}
+		}
+
+		&-base {
+			position: relative;
+
+			.overlay {
+				position: absolute;
+				background: #fff;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				opacity: 0.7;
+				text-align: center;
+				cursor: not-allowed;
+				display: none;
+
+				&.active {
+					display: block;
+				}
+
+				&:before {
+					content: ' ';
+					display: inline-block;
+					vertical-align: middle;
+					height: 100%;
+				}
+
+				img {
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+
+			.panel-title {
+				margin-bottom: 20px;
+				position: relative;
+			}
+
+			> .panel-body {
+				position: relative;
+
+				.tab-pane {
+					> .panel-actions, > .panel-repositories, > .panel-packages {
+						margin-bottom: 15px;
+						padding: 0;
+
+						border-bottom: 1px solid #ddd;
+					}
+
+					> .panel-actions {
+						> div[class^="col-md-"], div[class*="col-md-"] {
+							padding-left: 0;
+							padding-right: 0;
+						}
+
+						a {
+							margin-left: 5px;
+
+							&:last-child {
+								margin-left: 0;
+							}
+						}
+					}
+
+					> .panel-repositories, > .panel-packages {
+						border-bottom: 0;
+					}
+
+					ul {
+						list-style: none;
+						margin: 0;
+						padding: 0;
+					}
+
+					li {
+						padding: 2px 4px;
+						letter-spacing: 1px;
+						border-top: 1px dotted #ccc;
+
+						&.deleting-phase {
+							text-decoration: line-through;
+							cursor: not-allowed !important;
+						}
+
+						&:hover {
+							background: #f8f5f0;
+							cursor: pointer;
+
+							span.label {
+								display: inline-block;
+							}
+						}
+
+						div {
+							display: inline-block;
+						}
+
+						span.label {
+							margin-left: 10px;
+							display: none;
+							font-weight: normal;
+							font-size: 10px;
+							padding: 3px;
+						}
+
+						label {
+							display: inline-block;
+							margin-left: 10px;
+							color: #049977;
+							font-weight: normal;
+							font-size: 15px;
+						}
+					}
+
+					li:first-child {
+						border-top: 0;
+					}
+
+					li li {
+						margin-left: 16px;
+					}
+
+					ol > li > label {
+						color: #75756E;
+					}
+				}
+			}
+
+			.form-group {
+				&.has-error, &.has-success {
+					.help-block {
+						display: block !important;
+					}
+				}
+
+				.help-block {
+					display: none;
+				}
+			}
+		}
+	}
+}

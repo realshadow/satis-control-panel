@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+
+<?php
+
+require __DIR__.'/../bootstrap/autoload.php';
+require_once __DIR__.'/../bootstrap/app.php';
+require __DIR__ . '/../vendor/composer/satis/src/bootstrap.php';
+
+$appConfig = require __DIR__ . '/../config/satis.php';
+
+use Composer\Satis\Console\Application;
+
+/*
+foreach(['http', 'https'] as $protocol) {
+	$proxy = $appConfig['proxy'][$protocol];
+	if($proxy !== null) {
+		putenv(strtoupper($protocol) . '_PROXY=' . $proxy);
+		putenv(strtolower($protocol) . '_proxy=' . $proxy);
+	}
+}*/
+
+putenv('COMPOSER_HOME=' . $appConfig['composer_home']);
+putenv('COMPOSER_CACHE_DIR=' . $appConfig['composer_cache']);
+
+$application = new Application();
+$application->run();

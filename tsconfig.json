@@ -1,0 +1,8 @@
+{
+	"files": ["resources/assets/typescript/app.tsx", "typings/tsd.d.ts"],
+	"compilerOptions": {
+		"jsx": "react",
+		"experimentalDecorators": true,
+		"target": "es5"
+	}
+}

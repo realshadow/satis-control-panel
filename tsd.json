@@ -1,0 +1,36 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "react/react.d.ts": {
+      "commit": "b2d17b5dad042e293e77d09f2a30d281325cb606"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "5d101354c16bf0f634a8d5a2df2c37682d8c8062"
+    },
+    "react/react-global.d.ts": {
+      "commit": "af5b8275d1f2b92738b93fddabc461fc20c553a1"
+    },
+    "react-dom/react-dom.d.ts": {
+      "commit": "af5b8275d1f2b92738b93fddabc461fc20c553a1"
+    },
+    "postal/postal.d.ts": {
+      "commit": "b70895565dd5bd5de71c31e573d781409554bbf1"
+    },
+    "react-mixin/react-mixin.d.ts": {
+      "commit": "68548c2daab053869f323d475419c693478bbb73"
+    },
+    "blueimp-md5/blueimp-md5.d.ts": {
+      "commit": "68548c2daab053869f323d475419c693478bbb73"
+    },
+    "dropzone/dropzone.d.ts": {
+      "commit": "5d101354c16bf0f634a8d5a2df2c37682d8c8062"
+    },
+    "react-dropzone/react-dropzone.d.ts": {
+      "commit": "b2d17b5dad042e293e77d09f2a30d281325cb606"
+    }
+  }
+}

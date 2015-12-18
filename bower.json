@@ -1,0 +1,15 @@
+{
+  "name": "Satis Control Panel",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Homza Lukáš <lhomza@cfh.sk>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.4.0"
+  }
+}

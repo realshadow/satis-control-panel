@@ -1,0 +1,5 @@
+*
+!.gitignore
+!control-panel/
+!private
+!public
