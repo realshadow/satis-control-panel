@@ -36,7 +36,7 @@
             "mkdir -p storage/logs/async",
             "npm install",
             "npm run build",
-            "gulp init"
+            "node_modules/.bin/gulp init"
         ]
     },
     "config": {
