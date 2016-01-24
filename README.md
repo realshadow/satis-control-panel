@@ -3,7 +3,7 @@
 Satis Control Panel (SCP) is a simple web UI for managing your [Satis Repository](https://github.com/composer/satis) for
  [Composer Packages](https://getcomposer.org/).
  
-SCP backend is written in Laravel and with a touch of React + Typescript combo. 
+SCP backend is written in Laravel and with a React + Typescript combo. 
 
 ## Features
 
@@ -172,19 +172,19 @@ Private packages use `md5` encoded repository url as ID.
 * get all repositories
 
 ```
-GET control/panel/api/repository
+GET control-panel/api/repository
 ```
 
 * get one repository
 
 ```
-GET control/panel/api/repository/{repository_id}
+GET control-panel/api/repository/{repository_id}
 ```
 
 * add new repository
 
 ```
-POST control/panel/api/repository
+POST control-panel/api/repository
 {
     'url': 'foo',
     'type: 'bar'
@@ -194,7 +194,7 @@ POST control/panel/api/repository
 * update existing repository
 
 ```
-PUT control/panel/api/repository/{repository_id}
+PUT control-panel/api/repository/{repository_id}
 {
     'url': 'foo',
     'type: 'bar'
@@ -204,7 +204,7 @@ PUT control/panel/api/repository/{repository_id}
 * delete existing repository
 
 ```
-DELETE control/panel/api/repository/{repository_id}
+DELETE control-panel/api/repository/{repository_id}
 ```
 
 
