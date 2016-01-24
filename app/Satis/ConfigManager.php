@@ -3,6 +3,7 @@
 namespace App\Satis;
 
 use App\Satis\Collections\PackageCollection;
+use App\Satis\Context\PrivateRepository;
 use App\Satis\Context\PublicRepository;
 use App\Satis\Exceptions\PackageNotFoundException;
 use App\Satis\Model\Package;
@@ -12,7 +13,6 @@ use App\Satis\Exceptions\RepositoryNotFoundException;
 use App\Satis\Model\Repository;
 use Illuminate\Support\Collection;
 use JMS\Serializer\Serializer;
-use Log;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
