@@ -7,7 +7,6 @@ use App\Satis\Context\SyncCommand;
 use App\Satis\Exceptions\PackageBuildFailedException;
 use Illuminate\Support\Collection;
 use Monolog\Logger;
-use Monolog\Handler\StreamHandler;
 
 /**
  * @author Lukas Homza <lukashomz@gmail.com>

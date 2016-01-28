@@ -3,8 +3,6 @@
 namespace App\Satis;
 
 use App\Satis\Exceptions\PackageBuildFailedException;
-use Illuminate\Support\Collection;
-use Monolog\Logger;
 
 /**
  * @author Lukas Homza <lukashomz@gmail.com>
