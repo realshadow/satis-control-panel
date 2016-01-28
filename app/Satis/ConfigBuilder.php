@@ -44,7 +44,7 @@ class ConfigBuilder {
      * @param BuildContext $buildContext
      * @return ConfigBuilder
      */
-    public function setBuildContext($buildContext) {
+    public function setBuildContext(BuildContext $buildContext) {
         $this->buildContext = $buildContext;
 
         return $this;
@@ -89,3 +89,8 @@ class ConfigBuilder {
         return $output;
     }
 }
+
+
+# PRELOADER OBRAZOK
+# UKAZ NEJAKY index (ked je public a private, atd.)
+# command line generation of public/private json
