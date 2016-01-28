@@ -3,7 +3,6 @@
 namespace App\Satis\Model;
 
 use JMS\Serializer\Annotation\Type;
-use JMS\Serializer\Annotation\SerializedName;
 
 /**
  * Archive Configuration class

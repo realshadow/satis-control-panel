@@ -10,7 +10,6 @@ namespace App\Satis\Model;
 
 use Illuminate\Support\Collection;
 use JMS\Serializer\Annotation\Type;
-use JMS\Serializer\Annotation\SerializedName;
 
 /**
  * @author Lukas Homza <lukashomz@gmail.com>

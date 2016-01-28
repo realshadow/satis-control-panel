@@ -2,19 +2,9 @@
 
 namespace App\Satis;
 
-use App\Satis\Context\PrivateRepository;
-use App\Satis\Context\PublicRepository;
 use App\Satis\Exceptions\PackageBuildFailedException;
-use BadMethodCallException;
-use App\Satis\Collections\RepositoryCollection;
-use App\Satis\Exceptions\RepositoryNotFoundException;
-use App\Satis\Model\Repository;
-use Closure;
 use Illuminate\Support\Collection;
-use JMS\Serializer\Serializer;
-use Log;
 use Monolog\Logger;
-use Prophecy\Exception\Doubler\ClassNotFoundException;
 
 /**
  * @author Lukas Homza <lukashomz@gmail.com>
@@ -89,8 +79,3 @@ class ConfigBuilder {
         return $output;
     }
 }
-
-
-# PRELOADER OBRAZOK
-# UKAZ NEJAKY index (ked je public a private, atd.)
-# command line generation of public/private json

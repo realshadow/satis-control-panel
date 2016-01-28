@@ -4,8 +4,6 @@ namespace App\Satis\Model;
 
 use App\Satis\ConfigManager;
 use JMS\Serializer\Annotation\Type;
-use JMS\Serializer\Annotation\Exclude;
-use App;
 
 /**
 * Repository class
