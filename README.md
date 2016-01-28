@@ -1,3 +1,5 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/realshadow/satis-control-panel/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/realshadow/satis-control-panel/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/realshadow/satis-control-panel/badges/build.png?b=master)](https://scrutinizer-ci.com/g/realshadow/satis-control-panel/build-status/master) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/319e153a-ab8e-4532-ab6e-e796475a4900/small.png)](https://insight.sensiolabs.com/projects/319e153a-ab8e-4532-ab6e-e796475a4900)
+
 # Satis Control Panel
 
 Satis Control Panel (SCP) is a simple web UI for managing your [Satis Repository](https://github.com/composer/satis) for
