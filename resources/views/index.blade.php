@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>CFH Composer Repository</title>
+        <title>Satis Composer Repository</title>
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}" type="text/css" media="screen" />
 
