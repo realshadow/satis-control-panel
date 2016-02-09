@@ -195,21 +195,6 @@ class ConfigManager {
     }
 
     /**
-     * @return string
-     */
-    protected function save() {
-        $satisConfig = $this->serializer->serialize($this->satis, 'json');
-
-        $this->configPersister->updateWith($satisConfig);
-
-        if($this->disableBuild === false) {
-            return $this->configBuilder->build();
-        }
-
-        return true;
-    }
-
-    /**
      * @param string $repositoryUrl
      * @return string
      */
@@ -361,5 +346,20 @@ class ConfigManager {
      */
     public function getDefinition() {
         return $this->satis;
+    }
+
+    /**
+     * @return string
+     */
+    public function save() {
+        $satisConfig = $this->serializer->serialize($this->satis, 'json');
+
+        $this->configPersister->updateWith($satisConfig);
+
+        if($this->disableBuild === false) {
+            return $this->configBuilder->build();
+        }
+
+        return true;
     }
 }

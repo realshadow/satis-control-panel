@@ -18,6 +18,7 @@ class Kernel extends ConsoleKernel
         \App\Console\Commands\Inspire::class,
         \App\Console\Commands\Permissions::class,
         \App\Console\Commands\Persister::class,
+        \App\Console\Commands\MakeConfig::class,
     ];
 
     /**

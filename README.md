@@ -106,6 +106,16 @@ Build process can run synchronously or asynchronously (by redirecting output to 
 all builds run asynchronously, except on Windows where they are forced to run synchronously. This can be also forced during during API
 request by setting `async_mode` to `false`.
 
+### Missing mirrored configuration files
+
+Since the configuration files mirroring is triggered by any UI action, it is not always the correct behaviour. If you want to manually
+trigger config generation, for example when you make changes directly on the server, you can trigger the config generation with this
+artisan command
+
+```
+php artisan satis:make:config
+```
+
 ### UI State
 
 During build process whole UI is locked. During asynchronous builds UI state is handled by Node server, but running it is completely
