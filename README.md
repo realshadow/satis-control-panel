@@ -75,6 +75,10 @@ chmod -R 777 bootstrap/cache storage public/private public/public
 chmod 777 resources/satis.json
 ```
 
+### Visiting your control panel
+
+Now you can visit your control panel at `http://{host}/control-panel`.
+
 ## Configuration options
 
 Here is a list of configuration options that can be set in `config/satis.php` (some of them can be set in `.env` file as well for convenience):
