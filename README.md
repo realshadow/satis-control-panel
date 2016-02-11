@@ -80,9 +80,9 @@ chmod 777 resources/satis.json
 The control panel is located at `http://{host}/control-panel` and the packages will be generated (after first build of course) at `http://{host}/public`
 and `http://{host}/private` respectively.
 
-Separating them like this adds a bit more configuration options If for example you want to only use private packages, 
+Separating them like this adds a bit more configuration options. If for example you want to only use private packages, 
 you can change the directory of `private_repository` configuration option to `public` instead of `public/private` and have your 
-packages generated at `http://{host` and still have a functioning control panel.
+packages generated at `http://{host}` and still have a functioning control panel.
 
 ## Configuration options
 
