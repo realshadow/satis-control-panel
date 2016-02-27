@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Satis\ConfigManager;
+use App\Satis\ConfigPersister;
 use Illuminate\Console\Command;
 
 class MakeConfig extends Command

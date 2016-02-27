@@ -27,7 +27,11 @@ class Controller extends BaseController {
         if($request->ajax()) {
             $buildContext->setItemName($request->get('what'));
 
-            $configManager->forceBuild($buildContext);
+            $configManager->setDisableBuild(true)
+                ->save();
+
+            $configManager->setDisableBuild(false)
+                ->forceBuild($buildContext);
 
             Response::json()
                 ->send();

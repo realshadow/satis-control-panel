@@ -115,7 +115,7 @@ Build process can run synchronously or asynchronously (by redirecting output to 
 all builds run asynchronously, except on Windows where they are forced to run synchronously. This can be also forced during during API
 request by setting `async_mode` to `false`.
 
-### Missing mirrored configuration files
+### Missing or broken mirrored configuration files
 
 Since the configuration files mirroring is triggered by any UI action, it is not always the correct behaviour. If you want to manually
 trigger config generation, for example when you make changes directly on the server, you can trigger the config generation with this
