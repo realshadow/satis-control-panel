@@ -205,7 +205,7 @@ export class Packages extends React.Component<PackagesProps, PackagesState> impl
         let packages: Array<PackageInterface> = this.state.packages || this.props.packages;                       
         
         let output = null;
-        if(this.state.packages.length > 0) {
+        if(typeof this.state.packages !== 'undefined' && this.state.packages.length > 0) {
             output = (
                 <ul>
                     {

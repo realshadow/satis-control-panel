@@ -202,7 +202,7 @@ export class Repositories extends React.Component<RepositoriesProps, Repositorie
         let repositories: Array<RepositoryInterface> = this.state.repositories || this.props.repositories;                       
         
         let output = null;
-        if(this.state.repositories.length > 0) {
+        if(typeof this.state.repositories !== 'undefined' && this.state.repositories.length > 0) {
             output = (
                 <ul>
                     {
