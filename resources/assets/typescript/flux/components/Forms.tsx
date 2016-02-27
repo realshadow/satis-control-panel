@@ -379,6 +379,7 @@ export class PackageForm extends Form {
 			this.setState(state);
 
 			let formData: Object = this.serialize();
+			formData['name'] = formData['name'].trim();
 
 			let packageId: string = '';
 			let action: string = 'added';
