@@ -1,4 +1,4 @@
-import md5 = require('blueimp-md5');
+var md5 = require('blueimp-md5');
 
 export class App {
 	static NOTIFICATION = 'notification';
