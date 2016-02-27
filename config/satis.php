@@ -41,4 +41,6 @@ return [
     'node' => $sharedConfig,
 
     'sync_timeout' => 120,
+
+    'webpack_dev_server' => env('WEBPACK_DEV_SERVER', 'http://localhost:9001'),
 ];

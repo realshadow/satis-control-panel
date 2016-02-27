@@ -69,6 +69,7 @@ class Controller extends BaseController {
 
         return view('index', [
             'satis' => $serializer->serialize($controlPanelConfig, 'json'),
+            'webpackDevServer' => config('satis.webpack_dev_server'),
             'nodeServer' => config('satis.node.host') . ':' . config('satis.node.port')
         ]);
     }

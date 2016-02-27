@@ -1,6 +1,7 @@
 <?php
     /**
      * @var string $nodeServer
+     * @var string $webpackDevServer
      * @var string $satis
      */
 ?>
@@ -15,7 +16,7 @@
         <script src="{{ asset('js/jquery.min.js') }}"></script>
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
         
-        <script src="<?= $nodeServer ?>/socket.io/socket.io.js"></script>
+        <script src="{!! $nodeServer !!}/socket.io/socket.io.js"></script>
 
         <script type="text/javascript">
             var Satis = {!! $satis !!};
@@ -24,9 +25,9 @@
     <body>
         <div class="container"></div>
 
-        @if (env('APP_ENV', 'local') === 'local')
-            <script src="http://192.168.56.102:9001/webpack-dev-server.js"></script>
-            <script src="http://192.168.56.102:9001/bundle.js"></script>
+        @if (app()->isLocal())
+            <script src="{!! $webpackDevServer !!}/webpack-dev-server.js"></script>
+            <script src="{!! $webpackDevServer !!}/bundle.js"></script>
         @else
             <script src="{{ asset('js/bundle.js') }}"></script>
         @endif
