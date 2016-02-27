@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Satis Composer Repository</title>
+        <title>Satis Control Panel</title>
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}" type="text/css" media="screen" />
 
