@@ -75,6 +75,44 @@ chmod -R 777 bootstrap/cache storage public/private public/public
 chmod 777 resources/satis.json
 ```
 
+## Webserver setup
+
+Your document root should point to the `public` folder in the root as per default Laravel setup
+
+### Apache - example vhost
+
+```
+<VirtualHost *:80>
+        ServerName satis.example.com
+
+        DocumentRoot /var/www/html/satis.example.com/public
+</VirtualHost>
+```
+
+### Nginx - example vhost
+
+```
+server {
+        listen   80 default_server;
+
+        root /var/www/html/satis.example.com/public
+        index index.php index.html index.htm;
+
+        location / {
+             try_files $uri $uri/ /index.php$is_args$args;
+        }
+
+        # pass the PHP scripts to FastCGI server listening on /var/run/php5-fpm.sock
+        location ~ \.php$ {
+                try_files $uri /index.php =404;
+                fastcgi_pass unix:/var/run/php5-fpm.sock;
+                fastcgi_index index.php;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                include fastcgi_params;
+        }
+}
+```
+
 ### Visiting your control panel and generated packages
 
 The control panel is located at `http://{host}/control-panel` and the packages will be generated (after first build of course) at `http://{host}/public`
