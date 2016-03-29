@@ -111,7 +111,7 @@ let Application = React.createClass({
 	
 	connectToNodeServer(): void {
 		try {
-			var socket = io.connect(Satis.node_server.host + ':' + Satis.node_server.port);
+			var socket = io.connect(Satis.node_server.host + ':' + Satis.node_server.port,/^https/.test(Satis.node_server.host)?{secure: true}:{});
 
 			socket.on('notification', (data) => {
 				if(typeof data.locked === 'undefined') return;
