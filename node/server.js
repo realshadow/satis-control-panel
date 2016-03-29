@@ -5,15 +5,16 @@ var config = jf.readFileSync(__dirname + '/config.json');
 var lockFile = __dirname + '/../' + config['lock_file'];
 
 // Initialize server
-if(/^https/.test(config.host)){
-    var server = require('https').Server({
+var server;
+if(/^https/.test(config.host)) {
+    server = require('https').Server({
       key: fs.readFileSync(config.SSLCertificateKeyFile),
       cert: fs.readFileSync(config.SSLCertificateFile)
     }, app);
+} else {
+     server = require('http').Server(app);
 }
-else{
-     var server = require('http').Server(app);
-}
+
 server.listen(config.port, function() {
     console.log('Listening on *:' + config.port);
 });

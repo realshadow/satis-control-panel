@@ -60,8 +60,9 @@ class SatisServiceProvider extends ServiceProvider {
 
                             $output[$package->getName()] = $package->getVersion();
                         }
-                        if(!$output){
-                            return null;   
+
+                        if(!$output) {
+                            return null;
                         }
 
                         $type = array('name' => 'array');
