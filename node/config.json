@@ -1,5 +1,5 @@
 {
-	"host": "https://localhost",
+	"host": "http://localhost",
 	"port": 9010,
 	"lock_file": "storage/app/satislock.json",
 	"SSLCertificateKeyFile": "",
