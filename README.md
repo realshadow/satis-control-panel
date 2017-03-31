@@ -71,8 +71,8 @@ For building to work correctly you have to set correct permissions to few direct
 Each directory/file should be readable/writable by web user, e.g. www-data. For example:
 
 ```
-chmod -R 777 bootstrap/cache storage public/private public/public
-chmod 777 resources/satis.json
+chmod -R ug+rwx bootstrap/cache storage public/private public/public
+chmod ug+rwx resources/satis.json
 ```
 
 ## Webserver setup
@@ -95,14 +95,14 @@ Your document root should point to the `public` folder in the root as per defaul
 server {
         listen   80 default_server;
 
-        root /var/www/html/satis.example.com/public
+        root /var/www/html/satis.example.com/public;
         index index.php index.html index.htm;
 
         location / {
              try_files $uri $uri/ /index.php$is_args$args;
         }
 
-        # pass the PHP scripts to FastCGI server listening on /var/run/php5-fpm.sock
+        # pass the PHP scripts to FastCGI server liste_ning on /var/run/php5-fpm.sock
         location ~ \.php$ {
                 try_files $uri /index.php =404;
                 fastcgi_pass unix:/var/run/php5-fpm.sock;

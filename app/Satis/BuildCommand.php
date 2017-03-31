@@ -5,6 +5,7 @@ namespace App\Satis;
 use App\Satis\Context\AsyncCommand;
 use App\Satis\Context\SyncCommand;
 use App\Satis\Exceptions\PackageBuildFailedException;
+use App\Satis\Model\Repository;
 use Illuminate\Support\Collection;
 use Monolog\Logger;
 
@@ -172,7 +173,7 @@ class BuildCommand {
             return;
         }
 
-        if(filter_var($item, FILTER_VALIDATE_URL)) {
+        if(preg_match(Repository::REGEX, $item)) {
             $this->item = '--repository-url ' . escapeshellarg($item);
         } else {
             $this->item = escapeshellarg($item);

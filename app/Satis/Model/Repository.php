@@ -12,6 +12,9 @@ use JMS\Serializer\Annotation\Type;
 * @author Lukas Homza <lukashomz@gmail.com>
 */
 class Repository {
+
+  const REGEX = '#((git|ssh|http(s)?)|(git@[\w.]+))(:(\/\/)?)([\w.@:\/\-~]+)(.git)(\/)?#';
+
   /**
    * @Type("string")
    */

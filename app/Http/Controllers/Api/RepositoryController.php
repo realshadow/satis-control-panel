@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Satis\Exceptions\PackageBuildFailedException;
 use App\Satis\Exceptions\RepositoryNotFoundException;
+use App\Satis\Model\Repository;
 use Illuminate\Support\Collection;
 use Validator;
 use Illuminate\Http\Request;
@@ -27,10 +28,9 @@ class RepositoryController extends BaseController {
 
         $validator = Validator::make(
             $request->all(),
-            ['url' => 'required|url'],
+            ['url' => 'required'],
             [
-                'url.required' => 'Repository url must be provided.',
-                'url.url' => 'Repository url must be a valid URL address.'
+                'url.required' => 'Repository url must be provided.'
             ]
         );
 
