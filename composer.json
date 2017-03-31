@@ -5,11 +5,11 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "composer/satis": "dev-master",
-        "composer/composer": "1.0.*@dev",
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-        "jms/serializer": "^1.0"
+        "jms/serializer": "^1.0",
+        "composer/composer": "^1.4",
+        "composer/satis": "^1.0@alpha"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
