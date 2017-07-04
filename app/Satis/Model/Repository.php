@@ -81,7 +81,7 @@ class Repository {
    * @return static
    */
   public function setUrl($url) {
-    $this->url = urldecode(strtolower($url));
+    $this->url = urldecode($url);
 
     return $this;
   }
