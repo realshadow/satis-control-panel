@@ -9,7 +9,8 @@ export default class Validator {
 	}
 	
 	static url(value: string): boolean {
-		return urlRegex.test(value);
+		return true;
+		// return urlRegex.test(value);
 	}
 
 	static regex(value: string, regex: RegExp): boolean {
