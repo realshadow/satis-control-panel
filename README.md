@@ -1,4 +1,4 @@
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/realshadow/satis-control-panel/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/realshadow/satis-control-panel/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/realshadow/satis-control-panel/badges/build.png?b=master)](https://scrutinizer-ci.com/g/realshadow/satis-control-panel/build-status/master) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/319e153a-ab8e-4532-ab6e-e796475a4900/small.png)](https://insight.sensiolabs.com/projects/319e153a-ab8e-4532-ab6e-e796475a4900)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/realshadow/satis-control-panel/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/realshadow/satis-control-panel/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/realshadow/satis-control-panel/badges/build.png?b=master)](https://scrutinizer-ci.com/g/realshadow/satis-control-panel/build-status/master)
 
 # Satis Control Panel
 
@@ -137,6 +137,7 @@ Here is a list of configuration options that can be set in `config/satis.php` (s
 | public_repository  | Directory where Satis will generate public repository. This also serves as a way to distinguish public and private repositories in repository address, e.g. satis.example.com/public   | public                 | No                   |
 | proxy.http         | Proxy address that will be used by Satis/Composer for HTTP requests                                                                                                                    | null                   | Yes                  |
 | proxy.https        | Proxy address that will be used by Satis/Composer for HTTPS requests                                                                                                                   | null                   | Yes                  |
+| proxy.https        | See https://www.selenic.com/mercurial/hg.1.html#environment-variables for details                                                                                                      | null                   | Yes                  |
 
 **Note:** if you change the default directory, remember to set correct permissions for your new directory.
 
@@ -195,6 +196,7 @@ functionality introduced in [this PR](https://github.com/composer/satis/pull/266
 managed in UI. Those include:
 
 * vcs
+* hg
 * pear
 * composer
 * artifact

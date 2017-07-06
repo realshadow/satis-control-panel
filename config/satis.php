@@ -10,7 +10,7 @@ return [
     'composer_cache' => base_path(env('COMPOSER_HOME', 'storage' . DIRECTORY_SEPARATOR . 'composer/cache')),
 
     // See https://www.selenic.com/mercurial/hg.1.html#environment-variables for how HGRCPATH can be set/used
-    'hgrc_path' => false,
+    'hgrc_path' => env('HGRC_PATH', null),
 
     'memory_limit' => '2G',
     'build_verbosity' => 'vvv',
