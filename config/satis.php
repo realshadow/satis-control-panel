@@ -9,6 +9,9 @@ return [
     'composer_home' => base_path(env('COMPOSER_HOME', 'storage' . DIRECTORY_SEPARATOR . 'composer')),
     'composer_cache' => base_path(env('COMPOSER_HOME', 'storage' . DIRECTORY_SEPARATOR . 'composer/cache')),
 
+    // See https://www.selenic.com/mercurial/hg.1.html#environment-variables for how HGRCPATH can be set/used
+    'hgrc_path' => false,
+
     'memory_limit' => '2G',
     'build_verbosity' => 'vvv',
 
@@ -28,7 +31,7 @@ return [
     'default_repository_type' => 'vcs',
 
     'repository_types' => [
-        'vcs', 'pear', 'composer', 'artifact', 'path'
+        'vcs', 'hg', 'pear', 'composer', 'artifact', 'path'
     ],
 
     'build_directory' => base_path('public'),

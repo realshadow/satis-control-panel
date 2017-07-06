@@ -11,6 +11,10 @@ use Composer\Satis\Console\Application;
 putenv('COMPOSER_HOME=' . $appConfig['composer_home']);
 putenv('COMPOSER_CACHE_DIR=' . $appConfig['composer_cache']);
 
+if (!empty($appConfig['hgrc_path'])) {
+  putenv('HGRCPATH=' . $appConfig['hgrc_path']);
+}
+
 function includeIfExists($file)
 {
     if (file_exists($file)) {

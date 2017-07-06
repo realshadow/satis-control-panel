@@ -60,6 +60,12 @@ class Config {
 	 */
 	private $archive;
 
+    /**
+     * @Type("string")
+     * @SerializedName("twig-template")
+     */
+    private $twigTemplate;
+
 	/**
 	 * Constructor
 	 */
@@ -187,4 +193,23 @@ class Config {
 
 		return $this;
 	}
+
+    /**
+     * @return string
+     */
+    public function getTwigTemplate()
+    {
+        return $this->twigTemplate;
+    }
+
+    /**
+     * @param string $twigTemplate
+     * @return Config
+     */
+    public function setTwigTemplate($twigTemplate)
+    {
+        $this->twigTemplate = $twigTemplate;
+
+        return $this;
+    }
 }
