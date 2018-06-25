@@ -63,6 +63,7 @@ class ConfigMirror {
 
         $privateConfig->setHomepage(rtrim($homepage, '/') . '/' . config('satis.private_repository'))
             ->setRequireAll(true)
+            ->setProviders(true)
             ->setPackages(new PackageCollection());
 
         return $this->serializer->serialize($privateConfig, 'json');

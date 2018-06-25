@@ -44,6 +44,12 @@ class Config {
 
 	/**
 	 * @Type("boolean")
+	 * @SerializedName("providers")
+	 */
+	private $providers;
+
+	/**
+	 * @Type("boolean")
 	 * @SerializedName("require-dependencies")
 	 */
 	private $requireDependencies;
@@ -191,6 +197,22 @@ class Config {
 	public function setRequireAll($requireAll) {
 		$this->requireAll = $requireAll;
 
+		return $this;
+	}
+
+	/**
+	 * @return boolean
+	 */
+	public function getProviders() {
+		return $this->providers;
+	}
+
+	/**
+	 * @param boolean $providers
+	 * @return $this
+	 */
+	public function setProviders($providers) {
+		$this->providers = $providers;
 		return $this;
 	}
 
